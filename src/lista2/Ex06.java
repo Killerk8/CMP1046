@@ -17,11 +17,13 @@ public class Ex06 {
 		System.out.print("Digite o consumo de Quilowatts: ");
 		qwatts = ler.nextDouble();
 		
-		valorQW = (1/7) * (salario);
+		valorQW = ((salario * 1/7) / 100);
+		valorReais = (salario * 1/7);
+		valorDesconto = valorReais * 0.90;
 		
-		new DecimalFormat(".##").format(valorQW);		
-		
-		System.out.print("Valor em Reais de cada Quilowatts: " + valorQW);
+		System.out.printf("Valor em Reais de cada Quilowatts: %.2f \n",valorQW);
+		System.out.printf("Valor em Reais a ser pago: %.2f \n",valorReais);
+		System.out.printf("Valor com desconto: %.2f",valorDesconto);
 	}
 
 }
